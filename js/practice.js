@@ -1,4 +1,3 @@
-
 // Define a function named timesFour that takes in an input and multiples that input by four if it is numeric. If the input is not numeric, then return false.
 // timesFour(0) //0
 // timesFour("5") //20
@@ -9,12 +8,12 @@
 // timesFour(null) //false
 
 function timesFour(input) {
-    if (isNaN(input)){
+    if (isNaN(input)) {
         return false
     } else if (input === true || input === null) {
         return false;
     } else {
-        return input*4;
+        return input * 4;
     }
 }
 
@@ -37,10 +36,10 @@ console.log(timesFour(null));
 
 
 function convertDaystoHours(days) {
-    if (isNaN(days) || days === true || days === false){
+    if (isNaN(days) || days === true || days === false) {
         return false;
     } else {
-        return days*24;
+        return days * 24;
     }
 }
 
@@ -62,9 +61,9 @@ console.log(convertDaystoHours(false));
 // calculateTax(“Codeup”, 100)      // false
 // calculateTax()                   // false
 
-function calculateTax(totalPaid, taxPercent){
-    var finalPrice = totalPaid + (taxPercent/100 * totalPaid)
-    if (isNaN(totalPaid) || isNaN(taxPercent)){
+function calculateTax(totalPaid, taxPercent) {
+    var finalPrice = totalPaid + (taxPercent / 100 * totalPaid)
+    if (isNaN(totalPaid) || isNaN(taxPercent)) {
         return false;
     } else if (totalPaid || taxPercent === true && false) {
         return false
@@ -82,8 +81,8 @@ console.log(calculateTax("Codeup", 100));
 console.log(calculateTax());
 
 //Given arrays of strings that are orders of food in string form to your function, write a function named tacoTuesday that returns TRUE or FALSE if the array provided has any element mention the word ‘taco’ in its value.
-    //tacoTuesday(hasTacos) //true
-    //tacoTuesday(noTacos) //false
+//tacoTuesday(hasTacos) //true
+//tacoTuesday(noTacos) //false
 
 //hint: String.includes() might be useful here. . combined with some kind of iterating structure? Something that might be able to go through each part of our array? .
 // var hasTacos = [“blueberry muffin”, “banana”, “yogurt”, “cereal”, “brisket and egg taco”]
@@ -110,22 +109,22 @@ console.log(calculateTax());
 
 // Good news! I caught a bunch of FISH, and I got them in my truck:
 
-var fish1 = { type: "channel catfish", sizeInches: 18, locationCaught: "Lions Park", color: "blue"};
+var fish1 = {type: "channel catfish", sizeInches: 18, locationCaught: "Lions Park", color: "blue"};
 
-var fish2 = { type: "channel catfish", sizeInches: 19, locationCaught: "Lions Park", color: "blue"};
+var fish2 = {type: "channel catfish", sizeInches: 19, locationCaught: "Lions Park", color: "blue"};
 
-var fish3 = { type: "redfish", sizeInches: 22, locationCaught: "Braunig Lake", color: "red"};
+var fish3 = {type: "redfish", sizeInches: 22, locationCaught: "Braunig Lake", color: "red"};
 
-var fish4 = { type: "redfish", sizeInches: 29, locationCaught: "Braunig Lake", color: "red"};
+var fish4 = {type: "redfish", sizeInches: 29, locationCaught: "Braunig Lake", color: "red"};
 
 var kensCatch = [fish1, fish2, fish3, fish4];
 
 
 // Also, well, I caught these - don't ask me where:
 
-var sewerFish1 = { type: "tropical and unknown", sizeInches: 6, locationCaught: "sewer", color: "green"};
+var sewerFish1 = {type: "tropical and unknown", sizeInches: 6, locationCaught: "sewer", color: "green"};
 
-var sewerFish2 = { type: "tropical and unknown", sizeInches: 3, locationCaught: "sewer", color: "blue"};
+var sewerFish2 = {type: "tropical and unknown", sizeInches: 3, locationCaught: "sewer", color: "blue"};
 
 var strangeCatch = [sewerFish1, sewerFish2];
 
@@ -150,19 +149,48 @@ var strangeCatch = [sewerFish1, sewerFish2];
 //Write a function that will accept a number parameter as an argument - that number will indicate the amount of times to print out all even numbers up to the argument provided.
 
 //function logEvens(10) //2
-                        //4
-                        //6
-                        //8
-                        //10
+//4
+//6
+//8
+//10
 
-function logEvens(num){
+function logEvens(num) {
 
     for (var i = 0; i <= num; i++) {
 
-        if (i % 2 === 0 && i !== 0){
+        if (i % 2 === 0 && i !== 0) {
             console.log(i);
         }
     }
 }
 
-console.log(logEvens(30));
+// console.log(logEvens(30));
+
+// Function logNum()
+//
+// Write a function named logNum() - logNum will accept a number parameter indicating the number of times to LOG numbers up to what was provided. LogNum will let me know whether or not the number that we are iterating through is an EVEN or an ODD number
+//
+// logNum(10)// 1 is an odd number
+//              2 is an even number
+//              3 is an odd number
+//              etc..
+
+function logNum(num){
+
+    for (var i = 1; i <= num; i++){
+
+        if (i % 2 === 0){
+            console.log(i + " is an even number");
+        } else if (i % 2 !== 0){
+            console.log(i + " is an odd number")
+        }
+    }
+}
+
+
+// console.log(logNum(3));
+// console.log(logNum(5));
+// console.log(logNum(8));
+// console.log(logNum(9));
+
+logNum(10);
