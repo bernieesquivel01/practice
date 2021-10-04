@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>jQuery Practice</title>
+</head>
+<body>
+
+<!--Create a basic structure HTML file - it will need one paragraph element comprised of some amount of tet [no need to be too lengthy]-->
+<!--*Bring in jQuery for our use on this HTML page;-->
+<!--*Afterwards, let's program some jQuery where;-->
+
+<!--    When: the paragraph element is clicked -->
+<!--    You see: an alert with the text contents of that paragraph.-->
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci architecto beatae dicta dolor excepturi iure
+    necessitatibus nobis nostrum ratione? Adipisci architecto consequatur cumque distinctio dolore eaque et expedita
+    fugiat ipsum iure iusto laborum minus modi neque nihil praesentium quibusdam, reiciendis repellat sed sunt ullam
+    unde vel vitae voluptates voluptatum!</p>
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+        crossorigin="anonymous"></script>
+
+<script>
+    $(document).ready(function () {
+
+
+        $("p").click(function (e) {
+            alert($(this).text())
+        })
+
+    });
+
+</script>
+
+</body>
+
+
+</html>
